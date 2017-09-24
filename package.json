@@ -1,0 +1,42 @@
+{
+  "name": "lyrically",
+  "version": "1.0.0",
+  "description": "View a song's lyrics",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TSSaint/Lyrical.ly.git"
+  },
+  "keywords": [
+    "Lyrics",
+    "Songs",
+    "Music",
+    "GeniusAPI",
+    "Lyrically"
+  ],
+  "author": "T. Sebi Santos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TSSaint/Lyrical.ly/issues"
+  },
+  "homepage": "https://github.com/TSSaint/Lyrical.ly#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "cheerio": "^1.0.0-rc.2",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^4.0.0",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "express-session": "^1.15.5",
+    "isomorphic-fetch": "^2.2.1",
+    "method-override": "^2.3.9",
+    "morgan": "^1.8.2",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pg-promise": "^6.9.0"
+  }
+}
