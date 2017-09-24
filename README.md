@@ -7,3 +7,4 @@ Users can search for individual songs and save them to user profiles. They can t
 - JavaScript/jQuery
 - Express/Node.js
 - PSQL
+- Pug (render engine)
