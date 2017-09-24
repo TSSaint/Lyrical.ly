@@ -3,7 +3,7 @@ require('dotenv').config();
 // npm module - lyricist
 const Lyricist = require('lyricist');
 
-const lyricist = new Lyricist(process.env.API_KEY);
+const lyricist = new Lyricist(process.env.API_KEY = 'COSD3ks7Y1LMd4wJzduwdH5FrCqG2cUiMbME07xU8u9eX676zO10zvTXIzneZH');
 
 function getResults(req, res, next) {
   let title = req.query.search;

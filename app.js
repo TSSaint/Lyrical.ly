@@ -26,7 +26,6 @@ app.use(cookieParser());
 //   saveUninitialized: true,
 // }));
 
-
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -35,6 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // refer to views folder
 app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
 
 // set port
 const port = process.env.PORT || 3000;
@@ -43,4 +43,16 @@ app.listen(port, () => {
 });
 
 // set routes here
+const indexRoute = require('./routes/index-route');
+app.use('/', indexRoute);
+const songsRoutes = require('./routes/songs-routes');
+app.use('/songs', songsRoutes);
+const authRoutes = require('./routes/auth-routes');
+app.use('/auth', authRoutes);
+const usersRoutes = require('./routes/users-routes');
+app.use('/user', usersRoutes);
 
+// error handler
+app.get('*', (req, res) => {
+    res.status(404).send('not found!');
+});

@@ -1,5 +1,5 @@
 // for auth
-const bcrypt
+const bcrypt = require('bcryptjs')
 
 // initialize User
 const User = require('../models/user.js');
