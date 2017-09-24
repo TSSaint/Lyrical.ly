@@ -47,3 +47,5 @@ favoritesController.update = (req, res) => {
     res.status(500).json(err);
   });
 };
+
+module.exports = favoritesController;
