@@ -1,0 +1,15 @@
+extends ../partials/layout
+
+block content
+  div#songs-container
+    form(action='/songs')
+      input(type='text', name='search' placeholder='Search').search
+      button(type='submit').search-btn &raquo;
+
+    div.songs
+    each song in songs.hits
+      form(action='songs/' + song.result.id + '/').album
+        input(type='hidden' name='id' value= song.result.id)
+        input(type='submit' value='' style='background-image: url(' + song.result.header_image_thumbnail_url + ')').submit-image
+        label.song-title= song.result.title
+        label.song-artist= song.result.primary_artist.name

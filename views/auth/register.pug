@@ -1,0 +1,11 @@
+extends ../partials/layout
+
+block content
+  div.auth-container
+    h1 Register
+    h2 User information
+    form(method='POST' action='/auth/register')
+      input(type='text' name='username', placeholder='Username' required).credentials
+      input(type='email' name='email', placeholder='Email' required).credentials
+      input(type='password' name='password', placeholder='Password' required).credentials
+      button(type='submit').button.input-button Register

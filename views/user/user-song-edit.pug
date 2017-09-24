@@ -1,0 +1,12 @@
+extends ../partials/layout
+
+block content
+  div#edit-container
+
+    h1 Edit contents
+    form(method='POST' action='/user/' + song.id + '?_method=PUT')
+      label Title:
+        input(name='title' type='text' value= song.title).credentials
+      label Artist:
+        input(name='artist' type='text' value= song.artist).credentials
+        button(type='submit').button.input-button Update

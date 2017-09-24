@@ -1,0 +1,13 @@
+extends ../partials/layout
+
+block content
+  div#user-container
+    h2 Welcome #{user.username}
+    h1 Your Favorites
+
+    div.songs
+    each song in songs
+      form(action='user/' + song.id + '/')
+        input(type='submit' value='' style='background-image: url(' + song.album_image + ')').submit-image
+        h3.song-title= song.title
+        h3.song-artist= song.artist

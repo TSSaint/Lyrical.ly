@@ -1,0 +1,8 @@
+extends ./partials/layout
+
+block content
+  div#container
+
+    form(action='/songs')
+      input(type='text' name='search' placeholder='Lyrically Search').search
+      button(type='submit').search-btn &raquo;
