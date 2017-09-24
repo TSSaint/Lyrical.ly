@@ -2,7 +2,7 @@
 // initialize songs
 
 const express = require('express');
-const songsRouter = express.Routes();
+const songsRouter = express.Router();
 
 // helpers
 const songsHelper = require('../services/songs/songs-helpers');
