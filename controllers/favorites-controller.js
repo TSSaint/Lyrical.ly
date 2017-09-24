@@ -48,4 +48,29 @@ favoritesController.update = (req, res) => {
   });
 };
 
+// set favoritesController edit
+favoritesController.edit = (req, res) => {
+  Song.findById(req.params.id)
+    .then(song => {
+      res.render('user/user-song-edit', {
+        currentPage: 'edit',
+        song: song,
+      });
+    }).catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+};
+
+// set favoritesController delete
+favoritesController.delete = (req, res) => {
+  Song.destroy(req.params.id)
+    .then(() => {
+      res.redirect('/user');
+    }).catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+};
+
 module.exports = favoritesController;
