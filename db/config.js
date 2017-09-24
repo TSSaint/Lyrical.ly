@@ -1,5 +1,4 @@
 // configures the database
-
 const queries = {
   query: (event) => {
     console.log(event.query);
