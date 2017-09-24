@@ -1,0 +1,22 @@
+extends ../partials/layout
+
+block content
+  div#user-song-container
+    div.linkback
+      a(href='/user/') Back to profile
+
+    div.featured
+      img(src= song.album_image)
+      h2= song.title
+      h2= song.artist
+
+      div.options
+        form(action='/user/' + song.id + '/edit')
+          button(type='submit').edit Edit
+        form(method='POST' action='/user/' + song.id + '?_method=DELETE')
+          button(type='submit').delete Delete
+
+
+
+
+
