@@ -1,0 +1,11 @@
+extends ../partials/layout
+
+block content
+  div.auth-container
+    h1 Login
+    form(method='POST' action='/auth/login')
+      input(type='text' name='username' placeholder='Username' required).credentials
+      input(type='password' name='password' placeholder='Password' required).credentials
+      button(type='submit').button.input-button Login
+    p New user?
+    a(href='/auth/register') New Account
