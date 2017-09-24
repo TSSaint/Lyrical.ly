@@ -1,0 +1,21 @@
+extends ../partials/layout
+
+block content
+
+  div#single-container
+
+    div.song-single
+      div.single-album(style='background-image: url(' + single.song.header_image_thumbnail_url + ')')
+        img(src= single.song.header_image_thumbnail_url)
+
+      div.info
+        h2= single.song.title
+        h3= single.song.primary_artist.name
+        div.lyrics
+          p= lyrics
+        form(method='POST' action='/user')
+          input(type='number' name='genius' value= single.song.id).hidden
+          input(type='text' name='title' value= single.song.title).hidden
+          input(type='text' name='artist' value= single.song.primary_artist.name).hidden
+          input(type='text' name='album' value= single.song.header_image_thumbnail_url).hidden
+          button(type='submit').fav-btn Favorite
